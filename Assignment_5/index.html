@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Restaurant Menu Finder</h1>
+        <p>Discover restaurants and view today's menu</p>
+      </header>
+
+      <div id="loading" class="loading hidden">
+        <p>Loading restaurants...</p>
+      </div>
+
+      <div id="error" class="error-message hidden"></div>
+
+      <div id="restaurantList" class="restaurant-grid">
+        <!-- Restaurants will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Modal for Restaurant Details and Menu -->
+    <div id="restaurantModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <h2 id="modalRestaurantName"></h2>
+          <p id="modalRestaurantAddress"></p>
+          <p id="modalRestaurantPhone"></p>
+
+          <h3>Today's Menu</h3>
+          <div id="menuLoading" class="loading hidden">
+            <p>Loading menu...</p>
+          </div>
+          <div id="menuError" class="error-message hidden"></div>
+          <div id="menuContent" class="menu-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script5.js"></script>
+  </body>
+</html>
