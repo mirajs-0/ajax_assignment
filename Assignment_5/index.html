@@ -10,14 +10,19 @@
     <div class="container">
       <header>
         <h1>Restaurant Menu Finder</h1>
-        <p>Discover restaurants and view today's menu</p>
+        <p>Explore delicious meals from nearby restaurants</p>
       </header>
 
       <div id="loading" class="loading hidden">
-        <p>Loading restaurants...</p>
+        <p>Fetching restaurants...</p>
       </div>
 
-      <div id="error" class="error-message hidden"></div>
+      <div id="error" class="error-message hidden">
+        <p>
+          There was an issue fetching the restaurant data. Please try again
+          later.
+        </p>
+      </div>
 
       <div id="restaurantList" class="restaurant-grid">
         <!-- Restaurants will be dynamically inserted here -->
@@ -37,7 +42,9 @@
           <div id="menuLoading" class="loading hidden">
             <p>Loading menu...</p>
           </div>
-          <div id="menuError" class="error-message hidden"></div>
+          <div id="menuError" class="error-message hidden">
+            <p>Sorry, there was an issue loading the menu.</p>
+          </div>
           <div id="menuContent" class="menu-content"></div>
         </div>
       </div>

@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
   padding: 20px;
 }
 
@@ -18,26 +18,25 @@ body {
 
 header {
   text-align: center;
-  color: white;
   margin-bottom: 40px;
-  animation: slideDown 0.6s ease-out;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1em;
-  opacity: 0.9;
+  font-size: 1.2em;
+  color: #7f8c8d;
 }
 
 .loading {
   text-align: center;
   padding: 20px;
-  color: white;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  color: #7f8c8d;
 }
 
 .loading.hidden {
@@ -45,13 +44,11 @@ header p {
 }
 
 .error-message {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
+  background-color: #e74c3c;
+  color: #fff;
   padding: 15px;
   margin-bottom: 20px;
-  border-radius: 4px;
-  animation: slideDown 0.3s ease-out;
+  border-radius: 5px;
 }
 
 .error-message.hidden {
@@ -66,58 +63,54 @@ header p {
 }
 
 .restaurant-card {
-  background: white;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
   cursor: pointer;
-  animation: fadeIn 0.5s ease-out;
 }
 
 .restaurant-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .restaurant-card h3 {
-  color: #333;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 12px;
   font-size: 1.4em;
 }
 
 .restaurant-card p {
-  color: #666;
-  margin-bottom: 8px;
-  font-size: 0.95em;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 .restaurant-card .phone {
-  color: #888;
-  font-size: 0.85em;
-  margin-bottom: 15px;
+  color: #7f8c8d;
+  font-size: 0.9em;
+  margin-bottom: 20px;
 }
 
 .btn-menu {
   width: 100%;
-  padding: 10px 15px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 12px 20px;
+  background-color: #3498db;
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 1em;
+  border-radius: 5px;
+  font-size: 1.1em;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .btn-menu:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background-color: #2980b9;
 }
 
 .btn-menu:active {
-  transform: scale(0.98);
+  background-color: #1f5a8e;
 }
 
 /* Modal Styling */
@@ -129,7 +122,6 @@ header p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.3s ease-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,46 +132,41 @@ header p {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #fff;
   padding: 30px;
   border-radius: 8px;
-  width: 90%;
+  width: 80%;
   max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .close:hover {
-  color: #000;
+  color: #333;
 }
 
 .modal-body h2 {
-  color: #333;
+  color: #2c3e50;
   margin-bottom: 10px;
-  margin-top: 0;
 }
 
 .modal-body p {
-  color: #666;
-  margin-bottom: 8px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
 }
 
 .modal-body h3 {
-  color: #764ba2;
+  color: #3498db;
   margin-top: 25px;
   margin-bottom: 15px;
-  border-bottom: 2px solid #667eea;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
 }
 
@@ -190,24 +177,26 @@ header p {
 .menu-course {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #f8f9fa;
-  border-left: 4px solid #667eea;
+  background-color: #ecf0f1;
+  border-left: 5px solid #3498db;
   border-radius: 4px;
 }
 
 .menu-course h4 {
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 1.1em;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.2em;
 }
 
 .meals-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .meals-list li {
   padding: 8px 0;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .meals-list li:last-child {
@@ -215,9 +204,9 @@ header p {
 }
 
 .meals-list strong {
-  color: #333;
+  color: #2c3e50;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .price {
@@ -227,59 +216,25 @@ header p {
 }
 
 .allergies {
-  color: #dc3545;
+  color: #e74c3c;
   font-size: 0.85em;
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-
-/* Animations */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  margin-top: 5px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.8em;
+    font-size: 2.5em;
   }
 
   .restaurant-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
   }
 
   .modal-content {
-    width: 95%;
+    width: 90%;
     padding: 20px;
-    max-height: 90vh;
   }
 
   .restaurant-card {
@@ -289,7 +244,7 @@ header p {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .restaurant-grid {
