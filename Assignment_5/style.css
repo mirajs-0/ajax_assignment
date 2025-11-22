@@ -69,6 +69,10 @@ header p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Make the card height fixed */
+  justify-content: space-between; /* Ensure proper spacing between items */
 }
 
 .restaurant-card:hover {
@@ -91,6 +95,9 @@ header p {
   color: #7f8c8d;
   font-size: 0.9em;
   margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* Ensure long text is truncated */
 }
 
 .btn-menu {
